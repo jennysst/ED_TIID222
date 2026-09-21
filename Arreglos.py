@@ -24,5 +24,29 @@ fruta = ["Manzana", "Fresa", "Sandia", "Mango", "Melon", "Platano"]
 fruta.pop(4)
 print(fruta)
 
+#Eliminamos un elemento del arreglo usando el nombre
 fruta.remove("Manzana")
 print(fruta)
+
+#Declaracion de un arreglo vacio
+arreglo = []
+print(arreglo)
+
+n = int(input("Ingrese el tamaño del arreglo: "))
+print(n)
+
+for i in range(n):
+    dato = int(input("Ingresa un numero: "))
+    arreglo.append(dato)
+
+print("El arreglo es: ", arreglo)
+
+#Sin append
+n = int(input("Ingrese el tamaño del arreglo: "))
+arreglo = [0] * n
+
+for i in range(n):
+    dato = int(input("Ingresa un numero: "))
+    arreglo[i] = dato
+
+print(arreglo)
