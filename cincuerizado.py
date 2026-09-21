@@ -3,16 +3,18 @@
 arreglo = []
 resultado = []
 
-for i in range(5):
+n = int(input("Ingrese el tamaño del arreglo: "))
+arreglo = [0] * n
+
+for i in range(n):
     dato = int(input("Ingresa un numero: "))
-    arreglo.append(dato)
+    arreglo[i] = dato
 
-print("El arreglo es: ", arreglo)
+print(arreglo)
 
-for i in range(5):
-    if arreglo[i]%5 == 0:
-        resultado.append(arreglo[i])
-    else:
-        resultado.append(0)
+for i in arreglo:
+    while i%5 != 0:
+        i = i+1
+    resultado.append(i)
         
-print("El arreglo cincuerizado es: ", arreglo)
+print("El arreglo cincuerizado es: ", resultado)
