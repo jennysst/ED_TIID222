@@ -74,8 +74,41 @@ class ListEnlazada:
             #S no apunta a None
         print("None")
 
+
+    def Eliminar_Nodo_Inicio(self):
+        if(self.cabeza == None):
+            return "La lista esta vacia"
+
+        self.cabeza = self.cabeza.siguiente
+
+    def Eliminar_Nodo_Final(self):
+        if(self.cabeza == None):
+                    return "La lista esta vacia"
+
+        if(self.cabeza.siguiente == None):
+            self.cabeza = None
+            return
+
+        actual = self.cabeza
+        anterior = None
+
+        while actual.siguiente is not None:
+            anterior = actual
+            actual = actual.siguiente
+
+        anterior.siguiente = None
+
 Mi_lista = ListEnlazada()
 Mi_lista.Insertar_Nodo_al_Inicio(2)
 Mi_lista.Insertar_Nodo_al_Inicio(1)
 Mi_lista.Insertar_Nodo_al_Final(56)
+Mi_lista.Insertar_Nodo_al_Final(18)
+Mi_lista.Imprimir_Lista_Enlazada()
+
+print("ELIMINAR AL INICIO")
+Mi_lista.Eliminar_Nodo_Inicio()
+Mi_lista.Imprimir_Lista_Enlazada()
+
+print("ELIMINAR AL FINAL")
+Mi_lista.Eliminar_Nodo_Final()
 Mi_lista.Imprimir_Lista_Enlazada()
